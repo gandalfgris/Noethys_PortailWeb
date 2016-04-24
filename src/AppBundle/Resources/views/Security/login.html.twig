@@ -1,7 +1,16 @@
-{% extends "AppBundle::layout.html.twig" %}
+{% extends "AppBundle::layoutempty.html.twig" %}
 
 {% block title %}AppBundle:Security:login{% endblock %}
 
 {% block body %}
-<h1>Welcome to the Security:login page</h1>
+<h1>Espace parent - Noethys Web</h1>
+{% endblock %}
+
+{% block content %}
+
+<div>
+    {{ form(form) }}
+</div>
+
+
 {% endblock %}

@@ -35,6 +35,7 @@ security:
 
             logout: ~
 
+
     # access_control:
     #    - { path: ^/article, roles: ROLE_REDACTOR }
 
