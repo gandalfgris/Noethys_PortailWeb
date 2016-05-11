@@ -30,6 +30,25 @@ class DefaultController extends Controller
     {
 
 
+    }
+
+    /**
+     * @Route("/dashboard", name="dashboard")
+     * @Template()
+     */
+    public function dashboardAction()
+    {
+
+
+    }
+
+    /**
+     * @Route("/invoicelist", name="invoicelist")
+     * @Template()
+     */
+    public function invoicelistAction()
+    {
+
 
     }
 
