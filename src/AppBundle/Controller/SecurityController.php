@@ -40,6 +40,7 @@ class SecurityController extends Controller
 
         return [
             'form' => $form->createView(),
+            'error'=>$error
         ];
 
 

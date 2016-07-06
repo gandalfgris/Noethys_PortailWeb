@@ -17,7 +17,7 @@ class DefaultController extends Controller
     public function indexAction()
     {
 
-        return $this->redirectToRoute('login');
+        return $this->redirectToRoute('dashboard');
     }
 
     /**
@@ -43,10 +43,48 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/invoicelist", name="invoicelist")
+     * @Route("/facture", name="invoicelist")
      * @Template()
      */
-    public function invoicelistAction()
+    public function factureAction()
+    {
+
+
+    }
+
+    /**
+     * @Route("/reservations", name="invoicelist")
+     * @Template()
+     */
+    public function reservationAction()
+    {
+
+
+    }
+
+    /**
+     * @Route("/reglements", name="invoicelist")
+     * @Template()
+     */
+    public function reglementAction()
+    {
+
+
+    }
+    /**
+     * @Route("/pieces", name="invoicelist")
+     * @Template()
+     */
+    public function piecesAction()
+    {
+
+
+    }
+    /**
+     * @Route("/historique", name="invoicelist")
+     * @Template()
+     */
+    public function historiqueAction()
     {
 
 
