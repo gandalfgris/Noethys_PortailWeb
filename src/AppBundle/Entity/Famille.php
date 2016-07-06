@@ -3,14 +3,18 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+
 
 /**
- * Familles
+ * Famille
  *
  * @ORM\Table(name="familles", indexes={@ORM\Index(name="index_familles_IDcompte_payeur", columns={"IDcompte_payeur"})})
  * @ORM\Entity
  */
-class Familles
+class Famille implements UserInterface
 {
     /**
      * @var integer
@@ -280,6 +284,131 @@ class Familles
      */
     private $autorisationCafpro;
 
+    private $roles;
+    private $salt;
+
+    /**
+     * Famille constructor.
+     */
+    public function __construct(){
+
+        $this->salt = base64_encode(random_bytes(10));
+        $this->roles = array("ROLE_USER");
+
+    }
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->idfamille;
+    }
+
+    /**
+     * Set username
+     *
+     * @param string $username
+     *
+     * @return Famille
+     */
+    public function setUsername($username)
+    {
+        $this->internetIdentifiant = $username;
+
+        return $this;
+    }
+
+    /**
+     * Get username
+     *
+     * @return string
+     */
+    public function getUsername()
+    {
+        return $this->internetIdentifiant;
+    }
+
+    /**
+     * Set password
+     *
+     * @param string $password
+     *
+     * @return Famille
+     */
+    public function setPassword($password)
+    {
+        $this->internetMdp = $password;
+
+        return $this;
+    }
+
+    /**
+     * Get password
+     *
+     * @return string
+     */
+    public function getPassword()
+    {
+        return $this->internetMdp;
+    }
+
+    /**
+     * Set roles
+     *
+     * @param array $roles
+     *
+     * @return Famille
+     */
+    public function setRoles($roles)
+    {
+        //$this->roles = $roles;
+
+        return $this;
+    }
+
+    /**
+     * Get roles
+     *
+     * @return array
+     */
+    public function getRoles()
+    {
+        return array("ROLE_USER"); //$this->roles;
+    }
+
+    /**
+     * Set salt
+     *
+     * @param string $salt
+     *
+     * @return Famille
+     */
+    public function setSalt($salt)
+    {
+        $this->salt = ''; $salt;
+
+        return $this;
+    }
+
+    /**
+     * Get salt
+     *
+     * @return string
+     */
+    public function getSalt()
+    {
+        return ''; //$this->salt;
+    }
+
+
+
+    public function eraseCredentials()
+    {
+        return ;
+    }
 
 }
 
