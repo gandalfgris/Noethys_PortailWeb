@@ -11,7 +11,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
  * Familles
  *
  * @ORM\Table(name="familles", indexes={@ORM\Index(name="index_familles_IDcompte_payeur", columns={"IDcompte_payeur"}), @ORM\Index(name="IDcompte_payeur", columns={"IDcompte_payeur"}), @ORM\Index(name="IDcaisse", columns={"IDcaisse"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="ConnecthysBundle\Repository\FamillesRepository")
  */
 class Familles implements AdvancedUserInterface
 {

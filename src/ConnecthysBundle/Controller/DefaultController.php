@@ -39,12 +39,15 @@ class DefaultController extends Controller
      */
     public function activitesAction(Request $request)
     {
-      /*  $activites = $this
+        $activites = $this
             ->getRepositoryAct()
-            ->findAll();*/
-
+            ->find(3);
+        dump($activites);
+        $individu = $activites->getIdindividu();
+        $result = $individu->getNom();
+        dump($individu);
         return [
-         //   'articles' => $articles,
+            'activites' => $activites,
         ];
 
     }
@@ -106,7 +109,7 @@ class DefaultController extends Controller
     {
         return $this
             ->getDoctrine()
-            ->getRepository('ConnecthysBundle:Activites');
+            ->getRepository('ConnecthysBundle:Inscriptions');
     }
 
 }

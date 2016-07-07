@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * ComptesPayeurs
  *
  * @ORM\Table(name="comptes_payeurs", uniqueConstraints={@ORM\UniqueConstraint(name="IDfamille_2", columns={"IDfamille", "IDindividu"})}, indexes={@ORM\Index(name="IDfamille", columns={"IDfamille"}), @ORM\Index(name="IDindividu", columns={"IDindividu"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="ConnecthysBundle\Repository\ComptesPayeursRepository")
  */
 class ComptesPayeurs
 {
