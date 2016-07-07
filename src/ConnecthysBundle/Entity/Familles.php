@@ -3,6 +3,9 @@
 namespace ConnecthysBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\AdvancedUserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Familles
@@ -10,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="familles", indexes={@ORM\Index(name="index_familles_IDcompte_payeur", columns={"IDcompte_payeur"}), @ORM\Index(name="IDcompte_payeur", columns={"IDcompte_payeur"}), @ORM\Index(name="IDcaisse", columns={"IDcaisse"})})
  * @ORM\Entity
  */
-class Familles
+class Familles implements AdvancedUserInterface
 {
     /**
      * @var integer
@@ -286,6 +289,18 @@ class Familles
      */
     private $idcaisse;
 
+    private $salt;
+    private $roles;
+
+    /**
+     * Famille constructor.
+     */
+    public function __construct(){
+
+        $this->salt = base64_encode(random_bytes(10));
+        $this->roles = array("ROLE_USER");
+
+    }
 
 
     /**
@@ -1185,4 +1200,140 @@ class Familles
     {
         return $this->idcaisse;
     }
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->idfamille;
+    }
+
+    /**
+     * Set username
+     *
+     * @param string $username
+     *
+     * @return Famille
+     */
+    public function setUsername($username)
+    {
+        $this->internetIdentifiant = $username;
+
+        return $this;
+    }
+
+    /**
+     * Get username
+     *
+     * @return string
+     */
+    public function getUsername()
+    {
+        return $this->internetIdentifiant;
+    }
+
+    /**
+     * Set password
+     *
+     * @param string $password
+     *
+     * @return Famille
+     */
+    public function setPassword($password)
+    {
+        $this->internetMdp = $password;
+
+        return $this;
+    }
+
+    /**
+     * Get password
+     *
+     * @return string
+     */
+    public function getPassword()
+    {
+        return $this->internetMdp;
+    }
+
+    /**
+     * Set roles
+     *
+     * @param array $roles
+     *
+     * @return Famille
+     */
+    public function setRoles($roles)
+    {
+        //$this->roles = $roles;
+
+        return $this;
+    }
+
+    /**
+     * Get roles
+     *
+     * @return array
+     */
+    public function getRoles()
+    {
+        return array("ROLE_USER"); //$this->roles;
+    }
+
+    /**
+     * Set salt
+     *
+     * @param string $salt
+     *
+     * @return Famille
+     */
+    public function setSalt($salt)
+    {
+        $this->salt = ''; $salt;
+
+        return $this;
+    }
+
+    /**
+     * Get salt
+     *
+     * @return string
+     */
+    public function getSalt()
+    {
+        return ''; //$this->salt;
+    }
+
+
+
+    public function eraseCredentials()
+    {
+        return ;
+    }
+
+    public function isAccountNonExpired()
+    {
+        return true;
+    }
+
+    public function isAccountNonLocked()
+    {
+        return true;
+    }
+
+    public function isCredentialsNonExpired()
+    {
+        return true;
+    }
+
+    public function isEnabled()
+    {
+        return $this->internetActif;
+    }
+
+
 }

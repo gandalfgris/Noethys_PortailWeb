@@ -31,36 +31,54 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/facture", name="invoicelist")
+     * @Route("/activites", name="activites")
+     * @Method("GET")
      * @Template()
      */
-    public function factureAction()
+    public function activitesAction(Request $request)
+    {
+        $activites = $this
+            ->getRepositoryAct()
+            ->findAll();
+
+        return [
+            'articles' => $articles,
+            'author'   => $author,
+        ];
+
+    }
+
+    /**
+     * @Route("/reservations", name="reservations")
+     * @Template()
+     */
+    public function reservationsAction()
     {
 
 
     }
 
     /**
-     * @Route("/reservations", name="invoicelist")
+     * @Route("/factures", name="factures")
      * @Template()
      */
-    public function reservationAction()
+    public function facturesAction()
     {
 
 
     }
 
     /**
-     * @Route("/reglements", name="invoicelist")
+     * @Route("/reglements", name="reglements")
      * @Template()
      */
-    public function reglementAction()
+    public function reglementsAction()
     {
 
 
     }
     /**
-     * @Route("/pieces", name="invoicelist")
+     * @Route("/pieces", name="pieces")
      * @Template()
      */
     public function piecesAction()
@@ -69,13 +87,25 @@ class DefaultController extends Controller
 
     }
     /**
-     * @Route("/historique", name="invoicelist")
+     * @Route("/historiques", name="historiques")
      * @Template()
      */
-    public function historiqueAction()
+    public function historiquesAction()
     {
 
 
+    }
+
+    /**
+     * Get repositoryAct
+     *
+     * @return ActivitesRepository
+     */
+    private function getRepositoryAct()
+    {
+        return $this
+            ->getDoctrine()
+            ->getRepository('ConnecthysBundle:Activites');
     }
 
 }

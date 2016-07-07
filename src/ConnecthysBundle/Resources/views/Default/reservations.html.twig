@@ -1,0 +1,240 @@
+{% extends "AppBundle::layout.html.twig" %}
+
+{% block page_content %}
+    <h4 class="page-header">
+        <small><i class="fa fa-info-circle"></i> Sélectionnez une activité puis cliquez sur une des périodes disponibles pour accéder au calendrier des réservations correspondant.</small>
+    </h4>
+
+    <div class="box box-widget widget-user-2">
+
+        <!-- Définit une couleur au hasard pour l'individu -->
+
+
+        <!-- Nom de l'individu -->
+        <div class="widget-user-header bg-light-blue">
+            <div class="widget-user-image">
+                <img class="img-circle" src="./homme.png" alt="User Avatar">
+            </div>
+            <h3 class="widget-user-username">Kévin</h3>
+            <h5 class="widget-user-desc">12 ans</h5>
+        </div>
+
+        <!-- Liste des périodes -->
+        <div class="box-footer no-padding">
+
+            <div class="nav-tabs-custom no-margin">
+
+                <ul class="nav nav-tabs">
+
+
+                    <li class="active">
+                        <a class="text-light-blue" href="http://www.noethys.com/portail/portail.cgi/reservations#tab_1_1" data-toggle="tab">Accueil de loisirs</a>
+                    </li>
+
+
+                </ul>
+
+                <div class="tab-content no-padding">
+
+
+
+                    <div class="tab-pane active" id="tab_1_1">
+                        <ul class="nav nav-stacked">
+
+                            <li>
+                                <a href="http://www.noethys.com/portail/portail.cgi/planning/1/1/4">
+                                    <i class="fa fa-calendar text-light-blue"></i>
+                                    Juillet 2016
+                                    <small>- du 01/07/2016 au 31/07/2016</small>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="http://www.noethys.com/portail/portail.cgi/planning/1/2/4">
+                                    <i class="fa fa-calendar text-light-blue"></i>
+                                    Août 2016
+                                    <small>- du 01/08/2016 au 31/08/2016</small>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="box box-widget widget-user-2">
+
+        <!-- Définit une couleur au hasard pour l'individu -->
+
+
+        <!-- Nom de l'individu -->
+        <div class="widget-user-header bg-green">
+            <div class="widget-user-image">
+                <img class="img-circle" src="./femme.png" alt="User Avatar">
+            </div>
+            <h3 class="widget-user-username">Sophie</h3>
+            <h5 class="widget-user-desc">8 ans</h5>
+        </div>
+
+        <!-- Liste des périodes -->
+        <div class="box-footer no-padding">
+
+            <div class="nav-tabs-custom no-margin">
+
+                <ul class="nav nav-tabs">
+
+
+                    <li class="active">
+                        <a class="text-green" href="http://www.noethys.com/portail/portail.cgi/reservations#tab_2_1" data-toggle="tab">Accueil de loisirs</a>
+                    </li>
+
+
+                    <li>
+                        <a class="text-green" href="http://www.noethys.com/portail/portail.cgi/reservations#tab_3_2" data-toggle="tab">Garderie périscolaire</a>
+                    </li>
+
+
+                </ul>
+
+                <div class="tab-content no-padding">
+
+
+
+                    <div class="tab-pane active" id="tab_2_1">
+                        <ul class="nav nav-stacked">
+
+                            <li>
+                                <a href="http://www.noethys.com/portail/portail.cgi/planning/2/1/0">
+                                    <i class="fa fa-calendar text-green"></i>
+                                    Juillet 2016
+                                    <small>- du 01/07/2016 au 31/07/2016</small>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="http://www.noethys.com/portail/portail.cgi/planning/2/2/0">
+                                    <i class="fa fa-calendar text-green"></i>
+                                    Août 2016
+                                    <small>- du 01/08/2016 au 31/08/2016</small>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+
+                    <div class="tab-pane " id="tab_3_2">
+                        <ul class="nav nav-stacked">
+
+                            <li>
+                                <a href="http://www.noethys.com/portail/portail.cgi/planning/2/3/0">
+                                    <i class="fa fa-calendar text-green"></i>
+                                    Septembre 2016
+                                    <small>- du 01/09/2016 au 30/09/2016</small>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <h4 class="page-header">
+        Historique des demandes
+
+        <small>Vous pouvez supprimer des demandes non traitées.</small>
+
+    </h4>
+
+
+    <ul class="timeline">
+
+
+
+        <!-- timeline time label -->
+        <li class="time-label">
+            <span class="bg-blue">06/07/2016</span>
+        </li>
+
+
+        <li>
+            <i class="fa fa-envelope bg-red"></i>
+            <div class="timeline-item">
+                <span class="time"><i class="fa fa-clock-o"></i> 06:39</span>
+                <h3 class="timeline-header">
+
+                    Réservation de 2 dates
+
+                </h3>
+                <div class="timeline-footer">
+
+                    <span class="pull-right"><a href="http://www.noethys.com/portail/portail.cgi/reservations#" id="supprimer_action" data-toggle="modal" data-target="#modal_supprimer_demande" data-idaction="1" class="btn btn-danger btn-xs" title="Supprimer cette demande">Supprimer</a></span>
+                    <span class="text-red">Demande en attente de traitement.</span>
+
+
+
+                </div>
+            </div>
+        </li>
+
+
+
+
+        <!-- END timeline item -->
+        <li>
+            <i class="fa fa-clock-o bg-gray"></i>
+        </li>
+
+    </ul>
+
+
+    <!-- Modal : Supprimer une demande -->
+    <div class="modal fade" id="modal_supprimer_demande" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" id="myModalLabel"><strong>Supprimer une demande</strong></h4>
+                </div>
+
+                <div class="modal-body">
+
+                    <form>
+                        <input type="hidden" id="idaction" value="0">
+                    </form>
+
+                    Souhaitez-vous vraiment supprimer cette demande ?
+
+                    <!-- Div pour affiche erreur éventuelle de validation du form -->
+                    <div id="message_erreur_suppression" class="text-red"></div>
+
+                </div><!-- Fin modal body -->
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-danger" id="supprimer" data-dismiss="modal">Supprimer</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,167 @@
+{% extends "AppBundle::layout.html.twig" %}
+
+{% block page_content %}
+    <h4 class="page-header">
+        <small><i class="fa fa-info-circle"></i> Sélectionnez une activité puis cliquez sur une des périodes disponibles pour accéder au calendrier des réservations correspondant.</small>
+    </h4>
+
+    <div class="callout callout-danger">
+        <h5><i class="icon fa fa-warning"></i>  Il reste 2 factures à régler pour un montant total de <strong>25.00 €</strong></h5>
+    </div>
+
+    <div class="box box-success ">
+        <div class="box-header with-border">
+            <h3 class="box-title">Payer en ligne</h3>
+        </div>
+        <div class="box-body">
+            <p>Vous pouvez payer une ou plusieurs factures en ligne à l'aide de votre carte bancaire. Le paiement est sécurisé. Cliquez sur le bouton ci-dessous pour accéder au site de notre partenaire Paybox.</p>
+            <div>
+                <a href="http://www.noethys.com/portail/portail.cgi/factures#" class="btn btn-success" data-toggle="modal" data-target="#modal_selection_factures" title="Payer en ligne avec une carte bancaire"><i class="fa fa-credit-card"></i> Payer en ligne</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal : Sélection de factures-->
+    <div class="modal fade" id="modal_selection_factures" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Sélectionnez les factures à payer</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="box-body table-responsive">
+
+                        <table class="table table-bordered table-striped">
+                            <tbody>
+                            <tr>
+                                <th><center>Sélection</center></th>
+                                <th><center>Du</center></th>
+                                <th><center>Au</center></th>
+                                <th><center>N°</center></th>
+                                <th><center>Montant</center></th>
+                                <th><center>Déjà réglé</center></th>
+                                <th><center>Reste à régler</center></th>
+                            </tr>
+
+
+
+                            <tr>
+                                <td><center><div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" name="check_facture" class="flat-red" value="15.0" checked="" style="position: absolute; top: -30%; left: -30%; display: block; width: 160%; height: 160%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"><ins class="iCheck-helper" style="position: absolute; top: -30%; left: -30%; display: block; width: 160%; height: 160%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div></center></td>
+                                <td><center>01/03/2016</center></td>
+                                <td><center>31/03/2016</center></td>
+                                <td><center>000003</center></td>
+                                <td><center>30.00 €</center></td>
+                                <td><center>15.00 €</center></td>
+                                <td><center><span class="badge bg-red">15.00 €</span></center></td>
+                            </tr>
+
+
+
+
+
+                            <tr>
+                                <td><center><div class="icheckbox_flat-green checked" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" name="check_facture" class="flat-red" value="10.0" checked="" style="position: absolute; top: -30%; left: -30%; display: block; width: 160%; height: 160%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"><ins class="iCheck-helper" style="position: absolute; top: -30%; left: -30%; display: block; width: 160%; height: 160%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins></div></center></td>
+                                <td><center>01/01/2016</center></td>
+                                <td><center>31/01/2016</center></td>
+                                <td><center>000001</center></td>
+                                <td><center>100.00 €</center></td>
+                                <td><center>90.00 €</center></td>
+                                <td><center><span class="badge bg-red">10.00 €</span></center></td>
+                            </tr>
+
+
+                            </tbody>
+                        </table>
+
+                        <br>
+                        <div>
+                            Montant du règlement : <strong><span class="total">25.00 €</span></strong>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+                    <button type="button" class="btn btn-primary">Valider</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title">Liste des dernières factures</h3>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body table-responsive">
+            <table class="table table-bordered table-striped">
+                <tbody>
+                <tr>
+                    <th><center>Du</center></th>
+                    <th><center>Au</center></th>
+                    <th><center>N°</center></th>
+                    <th><center>Montant</center></th>
+                    <th><center>Déjà réglé</center></th>
+                    <th><center>Reste à régler</center></th>
+                    <th><center>Recevoir</center></th>
+                </tr>
+
+
+                <tr>
+                    <td><center>01/03/2016</center></td>
+                    <td><center>31/03/2016</center></td>
+                    <td><center>000003</center></td>
+                    <td><center>30.00 €</center></td>
+                    <td><center>15.00 €</center></td>
+                    <td><center><span class="badge bg-red">15.00 €</span></center></td>
+                    <td><center>
+                            <button type="button" class="btn btn-box-tool" data-toggle="modal" data-target="#modal_recevoir_document" data-id="3" data-info="000003" title="Recevoir un exemplaire de cette facture par Email ou par la Poste">
+                                <i class="fa fa-download"></i></button>
+                        </center></td>
+                </tr>
+
+                <tr>
+                    <td><center>01/02/2016</center></td>
+                    <td><center>28/02/2016</center></td>
+                    <td><center>000002</center></td>
+                    <td><center>50.00 €</center></td>
+                    <td><center>50.00 €</center></td>
+                    <td><center><span class="badge bg-green">0.00 €</span></center></td>
+                    <td><center>
+                            <button type="button" class="btn btn-box-tool" data-toggle="modal" data-target="#modal_recevoir_document" data-id="2" data-info="000002" title="Recevoir un exemplaire de cette facture par Email ou par la Poste">
+                                <i class="fa fa-download"></i></button>
+                        </center></td>
+                </tr>
+
+                <tr>
+                    <td><center>01/01/2016</center></td>
+                    <td><center>31/01/2016</center></td>
+                    <td><center>000001</center></td>
+                    <td><center>100.00 €</center></td>
+                    <td><center>90.00 €</center></td>
+                    <td><center><span class="badge bg-red">10.00 €</span></center></td>
+                    <td><center>
+                            <button type="button" class="btn btn-box-tool" data-toggle="modal" data-target="#modal_recevoir_document" data-id="1" data-info="000001" title="Recevoir un exemplaire de cette facture par Email ou par la Poste">
+                                <i class="fa fa-download"></i></button>
+                        </center></td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+
+
+
+
+
+{% endblock %}

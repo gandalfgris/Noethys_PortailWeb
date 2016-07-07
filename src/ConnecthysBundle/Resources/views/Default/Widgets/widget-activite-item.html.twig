@@ -1,0 +1,49 @@
+
+{%- block activite_item -%}
+<div class="box box-widget widget-user-2">
+
+    <!-- Définit une couleur au hasard pour l'individu -->
+
+
+    <!-- Nom de l'individu -->
+    <div class="widget-user-header bg-light-blue">
+        <div class="widget-user-image">
+            <img class="img-circle" src="./femme.png" alt="User Avatar">
+        </div>
+        <h3 class="widget-user-username">Sophie</h3>
+        <h5 class="widget-user-desc">8 ans</h5>
+    </div>
+
+    <!-- Liste des inscriptions -->
+
+    <div class="box-footer no-padding">
+        <table class="table table-bordered table-striped no-margin">
+            <tbody>
+            <tr>
+                <th>Activité</th>
+                <th>Groupe</th>
+            </tr>
+
+
+            <tr>
+                <td>Accueil de loisirs</td>
+                <td>3-6 ans</td>
+            </tr>
+
+            <tr>
+                <td>Garderie périscolaire</td>
+                <td>Groupe unique</td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <div class="box-footer no-margin">
+        <span class="pull-right"><a href="http://www.noethys.com/portail/portail.cgi/inscriptions#" id="demander_inscription" data-toggle="modal" data-target="#modal_demander_inscription" data-idindividu="2" class="btn btn-primary btn-xs" title="Inscrire Sophie à une activité">Inscrire à une activité</a></span>
+    </div>
+
+</div>
+{%- endblock -%}

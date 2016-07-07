@@ -3,13 +3,3 @@
 parameters:
 #    parameter_name: value
 
-services:
-#    service_name:
-#        class: ConnecthysBundle\Directory\ClassName
-#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
-
-    ConnecthysBundle.success_handler:
-      class: ConnecthysBundle\Service\SuccessHandler
-      arguments:
-       - '@router'
-       - '@security.authorization_checker'
