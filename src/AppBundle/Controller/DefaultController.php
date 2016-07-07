@@ -5,6 +5,8 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -43,27 +45,57 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/facture", name="invoicelist")
+     * @Route("/activites", name="activites")
+     * @Method("GET")
      * @Template()
      */
-    public function factureAction()
+    public function activitesAction(Request $request)
+    {
+        $activites = $this
+            ->getRepository()
+            ->findByAuthor($author, $sort);
+
+        return [
+            'articles' => $articles,
+            'author'   => $author,
+        ];
+
+    }
+
+    /**
+     * Get repositoryAct
+     *
+     * @return ArticleRepository
+     */
+    private function getRepositoryAct()
+    {
+        return $this
+            ->getDoctrine()
+            ->getRepository('AppBundle:Article');
+    }
+
+    /**
+     * @Route("/reservations", name="reservations")
+     * @Template()
+     */
+    public function reservationsAction()
     {
 
 
     }
 
     /**
-     * @Route("/reservations", name="invoicelist")
+     * @Route("/factures", name="factures")
      * @Template()
      */
-    public function reservationAction()
+    public function facturesAction()
     {
 
 
     }
 
     /**
-     * @Route("/reglements", name="invoicelist")
+     * @Route("/reglements", name="reglements")
      * @Template()
      */
     public function reglementAction()
