@@ -5,6 +5,8 @@ namespace ConnecthysBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -37,13 +39,12 @@ class DefaultController extends Controller
      */
     public function activitesAction(Request $request)
     {
-        $activites = $this
+      /*  $activites = $this
             ->getRepositoryAct()
-            ->findAll();
+            ->findAll();*/
 
         return [
-            'articles' => $articles,
-            'author'   => $author,
+         //   'articles' => $articles,
         ];
 
     }
