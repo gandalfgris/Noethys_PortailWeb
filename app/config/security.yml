@@ -15,15 +15,6 @@ security:
             entity:
                 class: AppBundle:Famille
                 property: internetIdentifiant
-        in_memory:
-            memory:
-                users:
-                    jga:
-                        password: %admin_password%
-                        roles: ROLE_ADMINISTRATOR
-                    demo:
-                        password: %admin_password%
-                        roles: ROLE_USER
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
