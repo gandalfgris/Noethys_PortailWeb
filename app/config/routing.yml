@@ -1,5 +1,10 @@
+connecthys:
+    resource: "@ConnecthysBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 app:
-    resource: "@AppBundle/Controller/"
+    resource: "@ConnecthysBundle/Controller/"
     type:     annotation
 
 logout:

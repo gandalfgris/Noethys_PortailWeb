@@ -1,0 +1,191 @@
+{% extends "ConnecthysBundle::layout.html.twig" %}
+
+{% block page_content %}
+    <h4 class="page-header">
+        Bienvenue sur le portail Famille
+    </h4>
+    <!-- Liste informations importantes -->
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box box-danger">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Etat de votre dossier</h3>
+                </div>
+                <div class="box-body">
+                    <ul>
+                        <li>3 pièces manquantes :
+                            <ul>
+                                <li><a href="/pieces">Fiche famille</a></li>
+                                <li><a href="/pieces">Fiche sanitaire de Kévin</a></li>
+                                <li><a href="/pieces">Fiche sanitaire de Noémie</a></li>
+                            </ul>
+                        </li>
+                        <li>1 cotisation manquante :
+                            <ul>
+                                <li><a href="/cotisations">Cotisation familiale</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- widget : inscriptions activite -->
+        <div class="col-lg-3 col-xs-6">
+            <a href="/inscriptions" class="small-box bg-blue">
+                <div class="inner">
+                    <h2>
+                        Activités
+                    </h2>
+
+                    <p><i class="fa fa-clock-o-noimage" "=""></i></p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-cogs"></i>
+                </div>
+                <div class="small-box-footer">
+                    Consulter et demander des inscriptions
+                </div>
+            </a>
+        </div>
+
+        <!-- widget : reservations activite -->
+        <div class="col-lg-3 col-xs-6">
+            <a href="/reservations" class="small-box bg-aqua">
+                <div class="inner">
+                    <h2>
+                        Réservations
+                    </h2>
+
+                    <p><i class="fa fa-clock-o-noimage" "=""></i></p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-calendar"></i>
+                </div>
+                <div class="small-box-footer">
+                    Consulter et demander des réservations
+                </div>
+            </a>
+        </div>
+
+        <!-- widget : factures -->
+        <div class="col-lg-3 col-xs-6">
+            <a href="/factures" class="small-box bg-green">
+                <div class="inner">
+                    <h2>
+                        Factures
+                    </h2>
+
+                    <p><i class="fa fa-clock-o-noimage" "=""></i></p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-file-text-o"></i>
+                </div>
+                <div class="small-box-footer">
+                    Consulter et payer des factures
+                </div>
+            </a>
+        </div>
+
+        <!-- widget : reglements -->
+        <div class="col-lg-3 col-xs-6">
+            <a href="/reglements" class="small-box bg-red">
+                <div class="inner">
+                    <h2>
+                        Règlements
+                    </h2>
+
+                    <p><i class="fa fa-clock-o-noimage" "=""></i></p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-money"></i>
+                </div>
+                <div class="small-box-footer">
+                    Consulter les règlements
+                </div>
+            </a>
+        </div>
+
+        <!-- widget : pieces -->
+        <div class="col-lg-3 col-xs-6">
+            <a href="/pieces" class="small-box bg-orange">
+                <div class="inner">
+                    <h2>
+                        Pièces
+                    </h2>
+
+                    <p><i class="fa fa-clock-o-noimage" "=""></i></p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-files-o"></i>
+                </div>
+                <div class="small-box-footer">
+                    Consulter et télécharger des pièces
+                </div>
+            </a>
+        </div>
+
+        <!-- widget : cotisations -->
+        <div class="col-lg-3 col-xs-6">
+            <a href="/cotisations" class="small-box bg-olive">
+                <div class="inner">
+                    <h2>
+                        Cotisations
+                    </h2>
+
+                    <p><i class="fa fa-clock-o-noimage" "=""></i></p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-folder-o"></i>
+                </div>
+                <div class="small-box-footer">
+                    Consulter les cotisations
+                </div>
+            </a>
+        </div>
+
+        <!-- widget : historique -->
+        <div class="col-lg-3 col-xs-6">
+            <a href="/historique" class="small-box bg-purple">
+                <div class="inner">
+                    <h2>
+                        Historique
+                    </h2>
+
+                    <p><i class="fa fa-clock-o-noimage" "=""></i></p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-clock-o"></i>
+                </div>
+                <div class="small-box-footer">
+                    Consulter l'historique des demandes
+                </div>
+            </a>
+        </div>
+
+        <!-- widget : contact -->
+        <div class="col-lg-3 col-xs-6">
+            <a href="/contact" class="small-box bg-yellow">
+                <div class="inner">
+                    <h2>
+                        Contact
+                    </h2>
+
+                    <p><i class="fa fa-clock-o-noimage" "=""></i></p>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-envelope-o"></i>
+                </div>
+                <div class="small-box-footer">
+                    Contacter l'organisateur
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+
+
+{% endblock %}
