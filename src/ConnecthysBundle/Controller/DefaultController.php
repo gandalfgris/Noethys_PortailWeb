@@ -90,11 +90,52 @@ class DefaultController extends Controller
 
 
     }
+
     /**
      * @Route("/historiques", name="historiques")
      * @Template()
      */
     public function historiquesAction()
+    {
+
+
+    }
+
+    /**
+     * @Route("/cotisations", name="cotisations")
+     * @Template()
+     */
+    public function cotisationsAction()
+    {
+
+
+    }
+
+    /**
+     * @Route("/contact", name="contact")
+     * @Template()
+     */
+    public function contactAction()
+    {
+
+
+    }
+
+    /**
+     * @Route("/mention", name="mention")
+     * @Template()
+     */
+    public function mentionAction()
+    {
+
+
+    }
+
+    /**
+     * @Route("/aide", name="aide")
+     * @Template()
+     */
+    public function aideAction()
     {
 
 
